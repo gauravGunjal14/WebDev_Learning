@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 5</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>User Info.</legend>
+        <label for="fname">Full Name:</label>
+        <input type="text" name="fname" id="fname" placeholder="Enter your name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <br><br>
+        <label for="phone">Phone:</label>
+        <input type="number" name="phone" id="phone" placeholder="Enter your phone number" required>
+        <br><br>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass" placeholder="Enter your password" required>
+        <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>User other info.</legend>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="Male" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female">Female</label>
+        <br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="DOB" id="dob" min="2001-01-01" max="2005-12-31" required>
+        <br><br>
+        <label for="school">School Name:</label>
+        <input type="text" name="School name" id="school" placeholder="Enter your school name" required>
+        <br><br>
+        <label for="board">Board:</label>
+        <select name="Board" id="board">
+            <option value=""disabled selected>Select Your Board</option>
+            <option value="CBSE">CBSE</option>
+            <option value="HSC">HSC</option>
+            <option value="Others">Others</option>
+        </select>
+        <br><br>
+        <label for="pyear">Passing Year:</label>
+        <input type="number" name="Passing year" id="pyear" placeholder="Enter your passing year" required min="2023" max="2025">
+        <br><br>
+        <label for="ecenter">Exam Center:</label>
+        <select name="Exam center" id="ecenter">
+            <option value="" disabled selected>Select exam center</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Thane">Thane</option>
+        </select>
+        <br><br>
+        <button>Register</button>
+        </fieldset>
+    </form>
+</body>
+</html>
