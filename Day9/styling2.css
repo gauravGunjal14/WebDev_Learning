@@ -1,0 +1,15 @@
+/*  */
+h1 {
+    color: blue;
+    background-color: lightgray;
+}
+
+ul {
+    color: green;
+    font-size: 20px;
+}
+
+p {
+    color: red;
+    font-size: 16px;
+}

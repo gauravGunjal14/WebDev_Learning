@@ -1,0 +1,17 @@
+#body{
+    background-color: lightgray;
+}
+
+.first {
+    color: brown;
+    background-color: lightgreen;
+}
+
+.second {
+    color: red;
+    background-color: lightblue;
+}
+
+#first {
+    color: blue;
+}
