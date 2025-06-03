@@ -1,0 +1,25 @@
+/* IN this cod ewe learned about diifrent colors and color selection technique and difrrent fonts and its size */
+/* Color by name */
+h1{
+    color: blue;
+    background-color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+}
+/* Color by rgb */
+p{
+    color: rgb(241, 211, 41);
+    background-color: #df4bdf;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
+/* Color by hex */
+h2{
+    color: #df4bdf;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+/* Color by hsl */
+h3{
+    color: hsl(170, 100%, 60%);
+}

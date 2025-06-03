@@ -1,0 +1,16 @@
+h1{
+    font-size: 10vw;  /* 10% of viewport width */
+    
+}
+.first{
+    font-size: 8vh;   /* 2% of viewport height */
+}
+
+ul{
+    font-weight: 800;
+}
+
+.second{
+    line-height: 50px;
+    text-transform: capitalize;
+}
