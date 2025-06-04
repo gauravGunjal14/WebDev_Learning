@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(205, 219, 205);
+    font-family: Arial, sans-serif;
+}
+
+.card{
+    box-sizing: border-box;
+    height: 20vw;
+    width: 25vw;
+    background-color: rgb(247, 208, 38);
+    border: 5px solid rgb(44, 0, 0);
+    padding: 10px;
+    margin: 20px 20px 20px 38vw;
+}
+
+.card:hover{
+    background-color: aqua;
+    transform: scale(1.1);
+}
+
+h2{
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+
+h3{
+    text-align: center;
+    color: rgb(0, 0, 255);
+}
+
+p{
+    text-align: justify;
+}
