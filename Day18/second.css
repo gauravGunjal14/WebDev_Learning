@@ -1,0 +1,17 @@
+.container{
+    background-color: aqua;
+    width: 800px;
+    height: 800px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 10px 10px 10px 10px gray;
+}
