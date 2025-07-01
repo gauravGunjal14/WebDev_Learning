@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: rgb(217, 178, 255);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgb(45, 0, 108);
+}
+
+.head{
+    justify-self: center;
+    padding-bottom: 10px;
+}
+
+.qoute{
+    background-color: aliceblue;padding: 10px;
+    border-radius: 10px;
+}
