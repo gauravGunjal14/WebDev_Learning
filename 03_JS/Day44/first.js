@@ -108,8 +108,9 @@ function RandomQuestion() {
     // using set because it contains unique values
     const data = new Set();
 
-    while (data.size != 5) {
+    while (data.size < 5) {
         const index = Math.floor(Math.random() * 20);
+        data.add(cricketGK[index]);
     }
 
     // Convert set into array
@@ -121,10 +122,28 @@ const form = document.getElementById("quizform");
 
 const problem = RandomQuestion();
 
-problem.forEach((obj) => {
+problem.forEach((obj, index) => {
     const div_elem = document.createElement("div");
     div_elem.className = "question";
 
-    const para = document.createElementNS("p");
-    para.textContent = obj["question"];
+    const para = document.createElement("p");
+    para.textContent = `${index + 1}. ${obj["question"]}`;
+    div_elem.appendChild(para);
+
+    // 4 options
+    obj["options"].forEach((value) => {
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = `q${index+1}`;
+        input.value = value;
+
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(value));
+        div_elem.appendChild(label);
+        div_elem.appendChild(document.createElement("br"));
+        div_elem.appendChild(document.createElement("br"));
+    });
+
+    form.appendChild(div_elem);
 });
