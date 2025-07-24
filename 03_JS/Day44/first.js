@@ -101,49 +101,64 @@ const cricketGK = [
     }
 ];
 
-const ans = [];
-
 function RandomQuestion() {
-
-    // using set because it contains unique values
     const data = new Set();
-
     while (data.size < 5) {
-        const index = Math.floor(Math.random() * 20);
+        const index = Math.floor(Math.random() * cricketGK.length);
         data.add(cricketGK[index]);
     }
-
-    // Convert set into array
     return [...data];
 }
 
-
 const form = document.getElementById("quizform");
+const output = document.getElementById("out");
+const questions = RandomQuestion();
+const answers = {};
 
-const problem = RandomQuestion();
+questions.forEach((q, index) => {
+    answers[`q${index + 1}`] = q.answer;
 
-problem.forEach((obj, index) => {
-    const div_elem = document.createElement("div");
-    div_elem.className = "question";
+    const div = document.createElement("div");
+    div.className = "question";
 
     const para = document.createElement("p");
-    para.textContent = `${index + 1}. ${obj["question"]}`;
-    div_elem.appendChild(para);
+    para.textContent = `${index + 1}. ${q.question}`;
+    div.appendChild(para);
 
-    // 4 options
-    obj["options"].forEach((value) => {
+    q.options.forEach((option) => {
         const label = document.createElement("label");
         const input = document.createElement("input");
+
         input.type = "radio";
-        input.name = `q${index+1}`;
-        input.value = value;
+        input.name = `q${index + 1}`;
+        input.value = option;
 
         label.appendChild(input);
-        label.appendChild(document.createTextNode(value));
-        div_elem.appendChild(label);
-        div_elem.appendChild(document.createElement("br"));
-        div_elem.appendChild(document.createElement("br"));
+        label.appendChild(document.createTextNode(option));
+        div.appendChild(label);
+        div.appendChild(document.createElement("br"));
     });
 
-    form.appendChild(div_elem);
+    form.appendChild(div);
+});
+
+// Submit button
+const submit = document.createElement("button");
+submit.textContent = "Submit";
+submit.type = "submit";
+form.appendChild(submit);
+
+// Submit logic
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    let score = 0;
+
+    for (let [key, value] of data.entries()) {
+        if (value === answers[key]) {
+            score++;
+        }
+    }
+
+    output.innerText = `You scored ${score} out of 5`;
 });
