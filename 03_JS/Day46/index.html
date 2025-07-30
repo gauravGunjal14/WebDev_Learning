@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AstroGlance - Astrology Insights</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>AstroGlance</h1>
+    <form id="astroForm">
+      <input type="text" placeholder="First Name" id="firstName" required />
+      <input type="text" placeholder="Middle Name" id="middleName" required />
+      <input type="text" placeholder="Surname" id="surname" required />
+      <input type="number" placeholder="Birth Date (DD)" id="birthDate" min="1" max="31" required />
+      <input type="number" placeholder="Birth Mounth (MM)" id="birthMonth" min="1" max="12" required />
+      <input type="number" placeholder="Birth Year (YYYY)" id="birthYear" min="1900" max="2025" required />
+      <button type="submit">Reveal Astrology Info</button>
+    </form>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script src="./first.js"></script>
+</body>
+
+</html>
