@@ -1,13 +1,9 @@
 // based on mounth
-function getZodiacSign(day, month) {
-    const signs = [
-    ["Capricorn", 20], ["Aquarius", 19], ["Pisces", 20],
-    ["Aries", 20], ["Taurus", 21], ["Gemini", 21],
-    ["Cancer", 23], ["Leo", 23], ["Virgo", 23],
-    ["Libra", 23], ["Scorpio", 22], ["Sagittarius", 22], ["Capricorn", 31]
-    ];
-    return day < signs[month - 1][1] ? signs[month - 1][0] : signs[month][0];
-}
+const ZodiacSign = [
+  "Capricorn", "Aquarius", "Pisces", "Aries",
+  "Taurus", "Gemini", "Cancer", "Leo", , "Virgo",
+  "Libra", "Scorpio", "Sagittarius"
+];
 
 // based on date
 const compliments = [
@@ -130,12 +126,22 @@ const futurePredictions = [
 
 const form = document.getElementById("astroForm");
 
-form.addEventListener("submit", (event)=>{
-    event.preventDefault();
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    const firstName = document.getElementById("firstName").value;
-    const surname = document.getElementById("surname").value;
-    const Day = document.getElementById("birthDate").value;
-    const Mounth = document.getElementById("birthMonth").value;
-    const Year = document.getElementById("birthYear")
+  const firstName = document.getElementById("firstName").value;
+  const surname = document.getElementById("surname").value;
+  const Day = Number(document.getElementById("birthDate").value);
+  const Mounth = Number(document.getElementById("birthMonth").value);
+  const Year = Number(document.getElementById("birthYear").value);
+
+  const firstMsg = `Hello ${firstName} ${surname}`;
+  const secondMsg = `Your Zordiac sign is ${ZodiacSign[Mounth - 1]}`;
+  const thirdMsg = compliments[Day - 1];
+  const forthMsg = victimCardCompliments[(firstName.length * surname.length * Year) % 20];
+  const fifthMsg = dailyRecommendations[(Day* firstName.length) % 30];
+  const sixthMsg = futurePredictions[(Day * Mounth * Year) % 30];
+
+  const result = document.getElementById("result");
+  result.innerText = `${firstMsg}, ${secondMsg}. ${thirdMsg} ${forthMsg} Our reccomendation for you: ${fifthMsg} Your future Predictions is: ${sixthMsg}`
 })
