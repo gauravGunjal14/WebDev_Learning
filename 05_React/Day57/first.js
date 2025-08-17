@@ -1,4 +1,4 @@
-const root = document.getElementById("root");
+// const root = document.getElementById("root");
 
 // const header1 = document.createElement("h1");
 // header1.textContent = "Hello World";
@@ -15,6 +15,7 @@ const root = document.getElementById("root");
 // root.appendChild(header1);
 // root.appendChild(header2);
 
+const root = document.getElementById("root");
 const React = {
     createElement: function createElement(type, style, content) {
         const element = document.createElement(type);
@@ -24,14 +25,15 @@ const React = {
         }
 
         element.textContent = content;
+        return element;
     }
 }
 
-const header1 = React.createElement("h1", {color: "blue", background: "yellow", fontSize: "30px"}, "Hello World");
-const header2 = React.createElement("h2", {color: "white", background: "black", fontSize: "25px"}, "Hii");
+const header1 = React.createElement("h1", { color: "blue", background: "yellow", fontSize: "30px" }, "Hello World");
+const header2 = React.createElement("h2", { color: "white", background: "black", fontSize: "25px" }, "Hii");
 
 const ReactDom = {
-    render: function render(element){
+    render: function render(element) {
         root.appendChild(element);
     }
 }
