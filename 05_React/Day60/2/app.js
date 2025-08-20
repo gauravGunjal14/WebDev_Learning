@@ -13,7 +13,6 @@ const div1 = (
     </>
 );
 
-
 function greet(){
     return <h1>Hello {name}</h1>
 }
@@ -21,8 +20,6 @@ function greet(){
 function greet2(){
     return <h1>Hii {name}</h1>
 }
-
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
