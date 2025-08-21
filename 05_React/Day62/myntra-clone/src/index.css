@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#card {
+  border: 2px solid black;
+  width: 152px;
+  display: flex;
+  /* text-align: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-container {
+  width: 100%;
+  background-color: rgb(249, 252, 255);
+  display: grid;
+  grid-template-rows: repeat(1fr, 1fr , 1fr);
+  padding: 20px 100px 20px 100px;
+  gap: 20px;
+}

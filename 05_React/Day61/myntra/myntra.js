@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const items = [
-    { name: "Shirt", discount: "20-80% OFF", image: "/images/Shirt.jpg" },
+    { name: "Shirt", discount: "20-80% OFF", image: "/images/Shirt.png" },
     { name: "Pants", price: "50-60% OFF", image: "/images/Shirt.jpg" },
     { name: "Shoes", price: "10-50% OFF", image: "/images/Shirt.jpg" },
     { name: "Ethnic Wear", discount: "50-80% OFF", image: "/images/Shirt.jpg" },
@@ -33,7 +33,7 @@ const items = [
     { name: "Hats & Caps", discount: "20-60% OFF", image: "/images/Shirt.jpg" },
     { name: "Scarves & Stoles", price: "30-70% OFF", image: "/images/Shirt.jpg" },
     { name: "Swimwear", discount: "25-60% OFF", image: "/images/Shirt.jpg" },
-    { name: "Sleepwear", price: "30-65% OFF", image: "/images/Shirt.jpg" },
+    { name: "Sleepwear", price: "30-65% OFF", image: "c" },
     { name: "Accessories Combo", discount: "UP TO 55% OFF", image: "/images/Shirt.jpg" },
 ]
 
