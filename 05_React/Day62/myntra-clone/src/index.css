@@ -4,20 +4,41 @@
   box-sizing: border-box;
 }
 
+.main{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(244, 255, 237);
+}
+
 #card {
-  border: 2px solid black;
+  border: 2px solid rgb(34, 158, 0);
+  border-radius: 10px;
+  background-color: white;
   width: 152px;
   display: flex;
-  /* text-align: center; */
   align-items: center;
   flex-direction: column;
 }
 
+#card img {
+  border-radius: 9px;
+}
+
+#card h1 {
+  font-size: 25px;
+}
+
+#card h2 {
+  font-size: 18px;
+}
+
 .card-container {
-  width: 100%;
-  background-color: rgb(249, 252, 255);
-  display: grid;
-  grid-template-rows: repeat(1fr, 1fr , 1fr);
+  width: 75%;
+  background-color: rgb(244, 255, 237);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
   padding: 20px 100px 20px 100px;
-  gap: 20px;
+  /* gap: 20px; */
 }
