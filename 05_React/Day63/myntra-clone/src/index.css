@@ -53,4 +53,32 @@
 .header{
   display: flex;
   justify-content: space-between;
+  height: 75px;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.35);
+  padding: 0px 50px;
+}
+
+.option{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.option button{
+  border: none;
+  background-color: white;
+  color: #4c4c4c;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#search{
+  width: 32%;
+  background-color: #e1e1e1;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
 }
