@@ -14,10 +14,10 @@ export default function Header() {
 
       <input type="text" name="search" id="search" placeholder="&#8981; Search for products brands and more" />
 
-      <div className="profile">
-        <button>Profile</button>
-        <button>Wishlist</button>
-        <button>Bag</button>
+      <div className="user">
+        <button className="profile"><img src="https://img.icons8.com/?size=100&id=12438&format=png&color=000000" alt="profile icon" className="profile-img"/>Profile</button>
+        <button className="wishlist"><img src="https://img.icons8.com/?size=100&id=lFyaayFdhpED&format=png&color=000000" alt="wishlist icon" className="wishlist-img" />Wishlist</button>
+        <button className="bag"><img src="https://img.icons8.com/?size=100&id=TTpVm8tPePng&format=png&color=000000" alt="bag icon" className="bag-img" />Bag</button>
       </div>
     </div>
   );
