@@ -1,12 +1,12 @@
-import Header from "./Header";
-import Card from "./Card";
-import items from "./Items";
-import Holding from "./holding";
+import Header from "./Header.jsx";
+import Card from "./Card.jsx";
+import items from "./Items.jsx";
+import Holding from "./holding.jsx";
 
 export default function App() {
   return (
     <>
-      <Header />
+      <Header/>
       <div className="main">
         <Holding />
         <div className="card-container">
