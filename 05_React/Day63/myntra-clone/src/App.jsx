@@ -1,7 +1,7 @@
-import Header from "./Header.jsx";
-import Card from "./Card.jsx";
-import items from "./Items.jsx";
-import Holding from "./holding.jsx";
+import Header from "./utils/Header.jsx";
+import Card from "./utils/Card.jsx";
+import items from "./utils/Items.jsx";
+import Holding from "./utils/holding.jsx";
 
 export default function App() {
   return (
