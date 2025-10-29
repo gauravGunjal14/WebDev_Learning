@@ -1,0 +1,13 @@
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client"
+
+function Decrement({counts, setCounts}) {
+
+    return (
+        <>
+            <button onClick={()=>setCounts(counts-1)}>Decrement</button>
+        </>
+    )
+}
+
+export default Decrement;
