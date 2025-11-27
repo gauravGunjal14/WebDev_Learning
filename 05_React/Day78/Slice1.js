@@ -41,5 +41,5 @@ const CoinSlice = createSlice({
     }
 });
 
-export default slice1.reducer;
+export default CoinSlice.reducer;
 export { FetchData };

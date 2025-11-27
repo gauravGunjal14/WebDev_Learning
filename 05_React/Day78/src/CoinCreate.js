@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FetchData } from "../Slice1";
+import CoinCard from "./CoinCard";
 
 function CoinCreate() {
 
@@ -8,8 +9,8 @@ function CoinCreate() {
     const {data, loading, error} = useSelector((state) => state.slice1);
 
     useEffect(() => {
-        dispatch(FetchData(10));
-    });
+        dispatch(FetchData(20));
+    },[]);
     
     // display information of 10 users
     if(loading){
@@ -21,9 +22,9 @@ function CoinCreate() {
 
     return (
         <>
-        <div>
+        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
             {
-                data.map((item) => {})
+                data.map((value) => <CoinCard key={value.id} coin={value} />)
             }
         </div>
         </>
