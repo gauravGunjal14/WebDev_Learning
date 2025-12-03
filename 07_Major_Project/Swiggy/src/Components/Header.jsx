@@ -2,7 +2,7 @@ export default function Header() {
     return (
         <header className="bg-[#ff5200]">
             <div className="w-7/10 flex justify-between items-center max-w-6xl mx-auto py-8">
-                <img className="w-40 h-12" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png" alt="Swiggy logo"></img>
+                <a href="https://www.swiggy.com/" target="_blank"><img className="w-40 h-12 cursor-pointer" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png" alt="Swiggy logo"></img></a>
                 <div className="text-white text-base font-bold space-x-10 flex items-center">
                     <a href="https://www.swiggy.com/corporate/" target="_blank">Swiggy Corporate</a>
                     <a href="https://www.swiggy.com/corporate/" target="_blank">Partner with us</a>
@@ -15,7 +15,7 @@ export default function Header() {
                 <img className="lg:h-112 md:h-80 sm:h-50 w-auto absolute right-0 top-0" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png" alt="right_img"/>
             </div>
             <div className="text-white font-bold pt-16 pb-8 flex justify-center flex-col items-center text-center w-6/10 mx-auto position-relative">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Order food & groceries. Discover best restaurants. Swiggy it!</h1>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Order food & groceries. Discover best restaurants. Swiggy it!</h2>
                 <div className="text-base flex justify-between mt-6 text-gray-600 w-full gap-4">
                     <input type="text" placeholder="Enter your delivery location" className="bg-white rounded-2xl px-4 py-4 w-4/10"></input>
                     <input type="text" placeholder="Search for restaurant, item or more" className="bg-white rounded-2xl px-4 py-4 w-6/10"></input>
