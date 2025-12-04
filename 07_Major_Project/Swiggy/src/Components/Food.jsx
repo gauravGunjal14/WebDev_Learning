@@ -7,7 +7,7 @@ export default function Food() {
             <div className="flex gap-10 justify-center flex-wrap">
                 {FoodData.map((foodItem) => (
                     <div key={foodItem.id} className="cursor-pointer">
-                        <a href={foodItem.action.link} target="_blank" rel="noopener noreferrer" >
+                        <a href="" target="_blank" rel="noopener noreferrer" >
                             <img src={`https://media-assets.swiggy.com/swiggy/image/upload/${foodItem.imageId}`} alt={foodItem.name} className="w-36 h-45 " />
                         </a>
                     </div>
