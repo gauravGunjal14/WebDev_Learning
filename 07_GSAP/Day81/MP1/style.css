@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.nav{
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-item{
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
