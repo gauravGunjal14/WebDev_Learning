@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg);
+    background-size: cover;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    background-color: rgba(181, 229, 165, 0.266);
+    backdrop-filter: blur(10px);
+}
+
+#nav img {
+
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+}
