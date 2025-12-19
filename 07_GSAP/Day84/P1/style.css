@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: azure;
+    font-size: 10rem;
+}
+
+h1 span{
+    display: inline-block;
+}
