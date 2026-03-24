@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb+srv://gaurav_gunjal14:SOWlp1C7FV8FraxK@coding.denw2w0.mongodb.net/';
+const uri = '';
 const client = new MongoClient(uri);
 
 const database = 'web_learning';
