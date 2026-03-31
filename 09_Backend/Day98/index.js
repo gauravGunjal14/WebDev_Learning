@@ -6,7 +6,6 @@ const validUser = require("./utils/validateuser")
 const bcrypt = require("bcrypt");
 const cookieParser = require('cookie-parser')
 const jwt = require('jsonwebtoken');
-const userAuth = require("./middleware/userAuth")
 
 app.use(express.json());
 app.use(cookieParser())
@@ -47,16 +46,33 @@ app.post("/login", async (req, res) => {
     }
 })
 
-app.get("/user", userAuth, async (req, res) => {
+app.get("/info", async (req, res) => {
     try {
-        res.send(req.result);
+        const payload = jwt.verify(req.cookies.token, "Rohit@13412$");
+        console.log(payload);
+        const result = await User.find();
+
+        res.send(result);
     }
     catch (err) {
         res.send("Error" + err.message);
     }
 })
 
-app.delete("/user/:id", userAuth, async (req, res) => {
+app.get("/user", async (req, res) => {
+    try {
+        const payload = jwt.verify(req.cookies.token, "Rohit@13412$");
+        const result = await User.findById(payload._id);
+        res.send(result);
+    }
+    catch (err) {
+        res.send("Error" + err.message);
+    }
+
+
+})
+
+app.delete("/user/:id", async (req, res) => {
     try {
         await User.findByIdAndDelete(req.params.id);
         res.send("Deleted Succesfully");
@@ -67,7 +83,7 @@ app.delete("/user/:id", userAuth, async (req, res) => {
     }
 })
 
-app.patch("/user", userAuth, async (req, res) => {
+app.patch("/user", async (req, res) => {
     try {
         const { _id, ...update } = req.body;
         await User.findByIdAndUpdate(_id, update, { "runValidators": true });
