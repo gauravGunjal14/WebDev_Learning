@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chat App</h1>
+    <input type="text" id="roomInput"
+        style="height: 5vh; width: 40vw; background-color:rgb(228, 228, 228); margin-bottom: 20px;">
+    <button onclick="joinRoom()" style="width: 9vw; height: 5vh; margin-bottom: 20px;">Join Room</button>
+    <div id="messageDisplay" style="height: 80vh; width: 95vw; background-color:cadetblue; margin-bottom: 20px;"></div>
+    <input type="text" id="messageInput"
+        style="height: 5vh; width: 40vw; background-color:rgb(228, 228, 228); margin-bottom: 20px;">
+    <button onclick="sendMessage()" style="width: 9vw; height: 5vh;">send</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const roomInput = document.getElementById('roomInput');
+        const messageBox = document.getElementById('messageDisplay');
+        const messageInput = document.getElementById('messageInput');
+        let roomId = null;
+
+        function joinRoom() {
+            const room = roomInput.value;
+            socket.emit('join-room', room);
+            roomId = room;
+        }
+
+        // function sendMessage() {
+        //     const msg = messageInput.value;
+        //     socket.emit('message', msg);
+        //     const element = document.createElement('div');
+        //     element.textContent = `You: ${msg}`;
+        //     element.style.textAlign = 'right';
+        //     messageBox.appendChild(element);
+        //     messageInput.value = '';
+        // }
+
+        function sendMessage() {
+            const msg = messageInput.value;
+            socket.emit('message', { room: roomId, msg });
+            const element = document.createElement('div');
+            element.textContent = `You: ${msg}`;
+            element.style.textAlign = 'right';
+            messageBox.appendChild(element);
+            messageInput.value = '';
+        }
+
+        socket.on('new-message', (msg) => {
+            const element = document.createElement('div');
+            element.textContent = `Friend: ${msg}`;
+            element.style.textAlign = 'left';
+            messageBox.appendChild(element);
+        });
+    </script>
+</body>
+
+</html>
